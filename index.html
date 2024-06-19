@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkbox Selection</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Select Options</h1>
+    <table id="optionsTable">
+        <tr>
+            <th>Category</th>
+            <th>Option</th>
+            <th>Description</th>
+            <th>Logic</th>
+        </tr>
+        <tr>
+            <td class="high">High</td>
+            <td><input type="checkbox" id="option1" onchange="updateTextBox()"> Option 1</td>
+            <td>Description of Option 1</td>
+            <td>Logic 1</td>
+        </tr>
+        <tr>
+            <td class="high">High</td>
+            <td><input type="checkbox" id="option2" onchange="updateTextBox()"> Option 2</td>
+            <td>Description of Option 2</td>
+            <td>Logic 2</td>
+        </tr>
+        <tr>
+            <td class="medium">Medium</td>
+            <td><input type="checkbox" id="option3" onchange="updateTextBox()"> Option 3</td>
+            <td>Description of Option 3</td>
+            <td>Logic 3</td>
+        </tr>
+        <tr>
+            <td class="medium">Medium</td>
+            <td><input type="checkbox" id="option4" onchange="updateTextBox()"> Option 4</td>
+            <td>Description of Option 4</td>
+            <td>Logic 4</td>
+        </tr>
+        <tr>
+            <td class="low">Low</td>
+            <td><input type="checkbox" id="option5" onchange="updateTextBox()"> Option 5</td>
+            <td>Description of Option 5</td>
+            <td>Logic 5</td>
+        </tr>
+    </table>
+    <textarea id="selectedOptions" rows="4" cols="50" readonly></textarea>
+    <button onclick="copyToClipboard()">Copy to Clipboard</button>
+    <button onclick="resetOptions()">Reset</button>
+    <label><input type="checkbox" id="hideDescription" onchange="toggleColumn('description')"> Hide Description</label>
+    <label><input type="checkbox" id="hideLogic" onchange="toggleColumn('logic')"> Hide Logic</label>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
